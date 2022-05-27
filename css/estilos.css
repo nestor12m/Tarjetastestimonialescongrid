@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=DM+Sans:ital,wght@0,500;0,700;1,400&family=Inter:wght@300;400;500;700&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca:wght@400;700&family=Outfit:wght@300;400;600;700&family=Poppins:wght@300&family=Quicksand:wght@300;700&family=Raleway:ital,wght@0,100;0,200;0,300;0,500;1,100;1,700&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root{
+    --Moderateviolet: hsl(263, 55%, 52%);
+    --Verydarkgrayishblue: hsl(217, 19%, 35%);
+    --Verydarkblackishblue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Lightgray: hsl(0, 0%, 81%);
+    --Lightgrayishblue: hsl(210, 46%, 95%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--Lightgrayishblue);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.contenedor{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1,320px;
+    /* grid-template-rows: repeat(5,1fr); */
+    /* background-color: aqua; */
+    justify-content: center;
+    gap: 20px;
+}
+img{
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+
+.item{
+
+    height: 450px;
+    width: 335px;
+    background-color: blueviolet;
+}
+.item:nth-child(1){
+    background-color: var(--Moderateviolet);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+.item:nth-child(2){
+    height: 280px;
+    background-color: var(--Verydarkgrayishblue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+.item:nth-child(3){
+    height: 230px;
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+.item:nth-child(3) .titulo{
+    color: black;
+}
+.item:nth-child(3) .sub-item h2{
+    color: var(--Verydarkgrayishblue);
+}
+.item:nth-child(3)  .parag{
+    color: var(--Verydarkgrayishblue);
+    padding-bottom: 23px;
+}
+.item:nth-child(4){
+    height: 430px;
+    background-color: var(--Verydarkblackishblue);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+.item:nth-child(5){
+    height: 450px;
+    background-color: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 10px;
+}
+
+.item:nth-child(5) .titulo{
+    color: black;
+}
+.sub-item{
+    display: flex;
+    width: 250px;
+    margin-left: 25px;
+    
+}
+.item:nth-child(5) .sub-item h2{
+    color: var(--Verydarkgrayishblue);
+}
+.item:nth-child(5)  .parag{
+    color: var(--Verydarkgrayishblue);
+    padding-bottom: 23px;
+}
+
+.sub-item-parr{
+    
+    padding-left: 20px;
+}
+.sub-item-parr h2{
+    color: var(--Lightgrayishblue);
+    font-size: 13px;
+}
+.sub-item-parr p{
+    color: var(--Lightgray);
+    font-size: 13px;
+}
+.titulo{
+    color:white;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 21px;
+}
+.parag{
+    color: var(--Lightgray);
+    margin-left: 30px;
+    margin-right: 23px;
+    font-size: 14px;
+}
+
+@media (min-width:1200px){
+
+    .contenedor{
+        margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(4,270px);
+        grid-template-rows: repeat(2,280px);
+        justify-content: center;
+        gap: 10px;
+    }
+    .item:nth-child(1){
+        grid-column: 1/3;
+        grid-row: 1/2;
+        width: 540px;
+        height: 280px;
+    }
+    .item:nth-child(2){
+        grid-column: 3/4;
+        grid-row: 1/2;
+        width: 270px;
+        height: 280px;
+    }
+    .item:nth-child(3){
+        grid-column: 1/2;
+        grid-row: 2/3;
+        width: 270px;
+        height: 280px;
+    }
+    .item:nth-child(4){
+        grid-column: 2/4;
+        grid-row: 2/3;
+        width: 540px;
+        height: 280px;
+        
+    }
+    .item:nth-child(5){
+        grid-column: 4/5;
+        grid-row: 1/3;
+        width: 270px;
+        height: 560px;
+    }
+
+    .parag{
+        color: var(--Lightgray);
+        margin-left: 20px;
+        margin-right: 40px;
+        font-size: 13.5px;
+    }
+    .item:nth-child(2) .parag{
+        margin-right: 48px;
+    }
+    .item:nth-child(3) .titulo{
+        margin-right: 48px;
+    }
+}
